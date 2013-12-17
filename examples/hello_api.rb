@@ -8,6 +8,11 @@ class HelloRobot < Artoo::Robot
 
   work do
   	puts "Hello from the API running at #{api_host}:#{api_port}..."
+    count = 0
+    every(1) do
+      publish(event_topic_name("name"), "name", "whats up #{count}")
+      count += 1
+    end
   end
 
   def hello name

@@ -53,6 +53,13 @@ module Artoo
         return MultiJson.dump({'result' => result})
       end
 
+      # Subscribte to robot events
+      # @return [nil]
+      get_ws '/robots/:robotid/events/:event' do
+        DeviceEventClient.new(@req.websocket, master.robot(@params['robotid']).event_topic_name(@params['event']))
+        return nil
+      end
+
       # Retrieve robot devices
       # @return [JSON] devices
       get '/robots/:robotid/devices' do

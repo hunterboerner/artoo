@@ -155,6 +155,12 @@ module Artoo
       return commands.include?(method_name.intern)
     end
 
+    # @return [String] event topic name
+    def event_topic_name(event)
+      "#{safe_name}_#{name}_#{event}"
+    end
+
+
 
     private
 

@@ -9,7 +9,8 @@ active_menu_docs: true
 breadcrumbs: "<li><a href='/documentation/test-driven-robotics'>Test Driven Robotics</a></li>"
 
 ---
-= partial "/documentation/getting-started/breadcrumbs"
+-content_for :bredcrumbs do
+  = partial "/documentation/getting-started/breadcrumbs"
 
 .test
   %p Artoo makes it easy to do Test Driven Development (TDD) of your robotic devices using your favorite Ruby test and mocking frameworks.

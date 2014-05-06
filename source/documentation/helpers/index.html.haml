@@ -11,7 +11,9 @@ page_title: Helpers
 page_subtitle: A Guide by Humans, for Humans.
 platforms: true
 ---
-= partial "/documentation/getting-started/breadcrumbs"
+
+-content_for :bredcrumbs do
+  = partial "/documentation/getting-started/breadcrumbs"
 
 
 %section.public-methods

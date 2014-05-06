@@ -9,7 +9,8 @@ active_menu_docs: true
 breadcrumbs: "<li><a href='/documentation/api'>API Server</a></li>"
 
 ---
-= partial "/documentation/getting-started/breadcrumbs"
+-content_for :bredcrumbs do
+	= partial "/documentation/getting-started/breadcrumbs"
 
 %h2  How To Connect
 %p Now that you are ready to write your own code you can access a running Artoo API server.

@@ -14,7 +14,8 @@ joystick_driver: true
 ps3_driver: true
 xbox360_driver: true
 ---
-= partial "/documentation/platforms/breadcrumbs"
+-content_for :bredcrumbs do
+  = partial "/documentation/platforms/breadcrumbs"
 
 %section.intro
   = image_tag "/images/devices/joystick.jpg", class: "display"
